@@ -1,19 +1,28 @@
-DSA TEST PROGRAM
+import java.util.*;
+public class factorialRecursion{
+public static void main(String[] args){
+System.out.println("PROGRAM TO FIND THE FACTORIAL OF A GIVEN NUMBER USING RECURSION");
+System.out.println("ENTER THE NUMBER TO FIND THE FACTORIAL OF A GIVEN NUMBER USING RECURSION");
+Scanner in = new Scanner(System.in);
+int n= in.nextInt();
+if(n<0)
+{
+  System.out.println("Invalid Number");
+}
+else
+System.out.println("FACTORIAL OF A GIVEN NUMBER IS: " +factorial(n));
+}
+static int factorial(int n)
+{
+if(n==0||n==1)
+{
+  return 1;
+}
 
-import java.util.Scanner;
+else
+{
+  return n*factorial(n-1);
+}
 
-class test {
-  public static void main(String[] args) {
-    Scanner myObj = new Scanner(System.in);
-
-    System.out.println("Enter name, age and salary:");
-
-    String name = myObj.nextLine();
-    // 
-       TYPE YOUR CODE HERE
-      //
-    System.out.println("Name: " + name);
-    System.out.println("Age: " + age);
-    System.out.println("Salary: " + salary);
-  }
+}
 }
